@@ -1,0 +1,22 @@
+# Backend server configuration for Replit
+run = "npm start"
+modules = ["nodejs-20", "web"]
+
+[deployment]
+run = ["sh", "-c", "npm start"]
+deploymentTarget = "node"
+publicDir = "../frontend"
+
+[nix]
+channel = "stable-21.11"
+
+[languages.javascript]
+pattern = "**/{*.js,*.jsx,*.ts,*.tsx,*.mjs}"
+syntax = "javascript"
+
+[languages.javascript.languageServer]
+start = "typescript-language-server --stdio"
+
+[custom]
+deployment.userSelection = "backend"
+backend = "/backend"
