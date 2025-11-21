@@ -1,4 +1,4 @@
-# Backend server configuration for Replit
+# Backend server configuration for Replit - v2.0
 run = "npm start"
 modules = ["nodejs-20", "web"]
 
@@ -6,6 +6,7 @@ modules = ["nodejs-20", "web"]
 run = ["sh", "-c", "npm start"]
 deploymentTarget = "node"
 publicDir = "../frontend"
+build = ["npm", "run", "build"]
 
 [nix]
 channel = "stable-21.11"
@@ -16,6 +17,14 @@ syntax = "javascript"
 
 [languages.javascript.languageServer]
 start = "typescript-language-server --stdio"
+
+[deployment]
+build = ["sh", "-c", "npm install && npm run build"]
+run = ["sh", "-c", "npm start"]
+
+[deployment.environment]
+NODE_ENV = "production"
+PORT = "3000"
 
 [custom]
 deployment.userSelection = "backend"
