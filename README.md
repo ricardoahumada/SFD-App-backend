@@ -1,9 +1,5 @@
 # Advanced Authentication System v2.0
 
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/your-repo/auth-system)
-[![Node](https://img.shields.io/badge/node-%3E%3D16.0.0-green.svg)](https://nodejs.org/)
-[![License](https://img.shields.io/badge/license-MIT-yellow.svg)](LICENSE)
-
 A comprehensive, enterprise-grade JWT authentication system with refresh token rotation, blacklisting, and advanced security features.
 
 ## What's New in v2.0
@@ -275,15 +271,3 @@ curl -X POST http://localhost:3000/api/tokens/introspect \
 - `/health` - Basic server health status
 - `/api/tokens/health` - Token service status
 - `/api/tokens/algorithm` - Algorithm configuration
-
-### Real-time Monitoring
-- Token expiration countdown
-- Session activity tracking
-- API response monitoring
-- Security event logging
-
-### Performance Metrics
-- Authentication success rates
-- Token refresh statistics
-- API response times
-- Memory usage monitoring
